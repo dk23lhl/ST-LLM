@@ -60,18 +60,18 @@ class ST_LLM(nn.Module):
     def __init__(
         self,
         input_dim=3,
-        channels=64,
+        #channels=64,
         num_nodes=170,
         input_len=12,
         output_len=12,
         llm_layer=6,
         U=1,
-        device= "cuda:7"
+        device= "cuda:0"
     ):
         super().__init__()
 
         self.num_nodes = num_nodes
-        self.node_dim = channels
+        #self.node_dim = channels
         self.input_len = input_len
         self.input_dim = input_dim
         self.output_len = output_len

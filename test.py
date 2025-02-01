@@ -1,7 +1,6 @@
 import util
 import argparse
 import torch
-from model_CAir import STAMT
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -87,6 +86,7 @@ def main():
         args.data = "data//" + args.data
         args.num_nodes = 266
         args.adjdata = "data/adj/adj_PEMS07_gs.npy"
+
     elif args.data == "CAir_AQI":
         args.data = "data//" + args.data
         args.num_nodes = 265

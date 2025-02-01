@@ -7,12 +7,12 @@ import util
 import os
 from util import *
 import random
-from model.ST_LLM_LoRA_ufzFFN import ST_LLM
+from model_ST_LLM import ST_LLM
 from ranger21 import Ranger
 os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'max_split_size_mb:21'
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--device", type=str, default="cuda:6", help="")
+parser.add_argument("--device", type=str, default="cuda:0", help="")
 parser.add_argument("--data", type=str, default="bike_drop", help="data path")
 parser.add_argument("--input_dim", type=int, default=3, help="input_dim")
 parser.add_argument("--num_nodes", type=int, default=250, help="number of nodes")
@@ -113,19 +113,19 @@ def main():
     data = args.data
 
     if args.data == "bike_drop":
-        args.data = "data//" + args.data
+        args.data = "/data2/liuhaolu/projects/ST-LLM-gpt/" + args.data
         args.num_nodes = 250
     
     elif args.data == "bike_pick":
-        args.data = "data//" + args.data
+        args.data = "/data2/liuhaolu/projects/ST-LLM-gpt/" + args.data
         args.num_nodes = 250
 
     elif args.data == "taxi_drop":
-        args.data = "data//" + args.data
+        args.data = "/data2/liuhaolu/projects/ST-LLM-gpt/" + args.data
         args.num_nodes = 266
 
     elif args.data == "taxi_pick":
-        args.data = "data//" + args.data
+        args.data = "/data2/liuhaolu/projects/ST-LLM-gpt/" + args.data
         args.num_nodes = 266    
     
     device = torch.device(args.device)
