@@ -25,13 +25,12 @@ If you need the original datasets, please refer to the [ESG](https://github.com/
 
 ```bash
 CUDA_VISIBLE_DEVICES=0
-nohup python train.py --data taxi_pick --device cuda:0  > your_log_name.log &
+nohup python train.py --data taxi_pick > your_log_name.log &
 ```
 
-## BibTeX
-If you find our work useful in your research. Please consider giving a star ⭐ and citation 📚.
-
-```bash
+## BibTex
+> If you find our work useful in your research. Please consider giving a star ⭐ and citation 📚:
+```bibtex
 @inproceedings{liu2024spatial,
   title={Spatial-temporal large language model for traffic prediction},
   author={Liu, Chenxi and Yang, Sun and Xu, Qianxiong and Li, Zhishuai and Long, Cheng and Li, Ziyue and Zhao, Rui},
@@ -39,5 +38,24 @@ If you find our work useful in your research. Please consider giving a star ⭐ 
   year={2024}
 }
 ```
+
+## Further Reading
+[**TimeCMA: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment**](https://arxiv.org/abs/2406.01638), in *AAAI* 2025.
+[\[GitHub Repo\]](https://github.com/ChenxiLiu-HNU/TimeCMA)
+
+**Authors**: Chenxi Liu, Qianxiong Xu, Hao Miao, Sun Yang, Lingzheng Zhang, Cheng Long, Ziyue Li, Rui Zhao
+
+```bibtex
+@inproceedings{liu2024timecma,
+  title={TimeCMA: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment},
+  author={Liu, Chenxi and Xu, Qianxiong and Miao, Hao and Yang, Sun and Zhang, Lingzheng and Long, Cheng and Li, Ziyue and Zhao, Rui},
+  booktitle={AAAI},
+  year={2025}
+}
+```
+
 ## Acknowledgement
 Our implementation adapts [OFA](https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All) as the code base and has extensively modified it for our purposes. We are grateful to the authors for providing their implementations and related resources.
+
+## Contact Us
+For inquiries or further assistance, contact us at [chenxi.liu@ntu.edu.sg](mailto:chenxi.liu@ntu.edu.sg) or open an issue on this repository.
